@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+    <body>
+        <div class="container">
+            <div class ="card">
+              <h1>To Do List</h1>
+              <div class="task-input">
+                <div>
+                    <input 
+                    class="title-input" 
+                    type="text" id="title" 
+                    placeholder="Enter Title" 
+                    autocomplete="off"
+                    />
+                    <input 
+                    class="description-input" 
+                    type="text" 
+                    id="description" 
+                    placeholder="Enter Description" 
+                    autocomplete="off"
+                    />
+                </div>
+                <div class="btn-add-container">
+                  <button class ="btn-add">Add new task</button>
+                  <button onclick="completeEdit()" class ="btn-complete-edit">Complete edit</button>
+                </div>
+              </div>
+              <ul class = 'list'>
+                <li class="list-item">
+                  <div class="task-block">
+                    <div class="title-block">
+                      <p class="title">Title 1</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="description-block">
+                      <p class="description">Description 1</p>
+                    </div>
+                  </div>
+                  <div class="btn-block">
+                      <button class="btn-edit"><img class="miniicon-edit" src="./src/assets/edit-icon.svg"></button>
+                      <button class="btn-delete"><img class="miniicon-delete" src="./src/assets/delete-icon.svg"></button>
+                    </div>
+                </li>
+                <li class="list-item">
+                  <div class="task-block">
+                    <div class="title-block">
+                      <p class="title">Title 2</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="description-block">
+                      <p class="description">Description 2</p>
+                    </div>
+                  </div>
+                  <div class="btn-block">                      
+                      <button class="btn-edit"><img class="miniicon-edit" src="./src/assets/edit-icon.svg"></button>
+                      <button class="btn-delete"><img class="miniicon-delete" src="./src/assets/delete-icon.svg"></button>
+                    </div>
+                </li>
+                <li class="list-item">
+                  <div class="task-block">
+                    <div class="title-block">
+                      <p class="title">Title 3</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="description-block">
+                      <p class="description">Description 3</p>
+                    </div>
+                  </div>
+                    <div class="btn-block">
+                      <button class="btn-edit"><img class="miniicon-edit" src="./src/assets/edit-icon.svg"></button>
+                      <button class="btn-delete"><img class="miniicon-delete" src="./src/assets/delete-icon.svg"></button>
+                    </div>
+                </li>
+              </ul>
+              <button onclick="deleteAll()" class="btn-delete">Clear all<img class="miniicon-delete" src="./src/assets/delete-icon.svg"></button>
+            </div>
+          </div>  
+          <script src="./script.js"></script>
+    </body>
+</html>
