@@ -1,8 +1,8 @@
 let saveBtnEl = document.querySelector('.btn-add');
 let deleteBtnEl = document.querySelector('.btn-delete');
 let editBtnEl = document.querySelector('.btn-edit');
-let taskList = document.querySelector('.list')
-let btnCompleteEdit = document.querySelector('.btn-complete-edit')
+let taskList = document.querySelector('.list');
+let btnCompleteEdit = document.querySelector('.btn-complete-edit');
 
 let tasks = [];
 !localStorage.tasks ? tasks = [] : tasks = JSON.parse(localStorage.getItem('tasks'))
@@ -62,7 +62,7 @@ const createTemplate = (tasks, index) => {
             </div>
         </li>
     `
-    // Шаблон списка
+    // Шаблон задачи
 }
 
 const completeTask = index => {
@@ -87,8 +87,9 @@ const filterTask = ()=> {
 }
 
 const fillHTMLlist = () => {
-    taskList.innerHTML = '';
+    taskList.innerHTML = 'Add your first task!';
     if (tasks.length > 0) {
+        taskList.innerHTML = '';
         filterTask();
         tasks.forEach((item, index) => {
             taskList.innerHTML += createTemplate(item, index);

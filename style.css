@@ -7,7 +7,7 @@
     color: #2c3e50;
     background: #2c3e50;
   }
-  .card{
+  .card {
     display: flex;
     flex-direction: column;
     min-height: 500px;
@@ -97,7 +97,6 @@
     text-transform: uppercase;
     font-weight: 700;
     padding-left: 7px;
-    border: 0;
     border-radius: 15px;
     background: transparent;
     cursor: pointer;
@@ -107,7 +106,7 @@
     outline: none;
     border: 1px solid rgba(211, 63, 63, 0);
   }
-  .btn-delete:hover{
+  .btn-delete:hover {
     border: 1px solid rgb(211, 63, 63);
   }
   .btn-edit {
@@ -121,11 +120,14 @@
     transition: all 0.22s;
     border: 1px solid rgba(211, 63, 63, 0);
   }
-  .btn-edit:hover{
+  .btn-edit:hover {
     border: 1px solid #11cdef;
   }
-  button:last-of-type{
+  .bottom-btns {
     margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .miniicon-delete {
     width: 30px;
@@ -173,7 +175,7 @@
     padding: 0;
     list-style: none;
   }
-  .list.delition{
+  .list.delition {
     animation: opacity 0.3s ease-in-out;
   }
   .list-item {
@@ -198,7 +200,9 @@
     }
   }
   .title-block {
+    display: flex;
     overflow: hidden;
+    align-items: center;
     margin-left: 5px;
     width: 40%;
   }
@@ -213,16 +217,38 @@
   .description {
     word-break: break-all;
   }
-  .line{
+  .line {
     width: fit-content;
     border-right: 1px solid #2c3e5049;
   }
   input[type=checkbox] {
-    width: 25px;
+    appearance: none;
+    width: 30px;
     height: 25px;
-  }
-  input[type=checkbox]:hover{
+    background-color: #ffffff;
+    border: 1px solid #11cdef;
+    border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  input[type=checkbox]:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 15px;
+    content: "\f00c";
+    color: #00000094;
+    display: none;
+  }
+  input[type=checkbox]:hover {
+    background-color: #11ceef27;
+  }
+  input[type=checkbox]:hover:after {
+    display: block;
+  }
+  input[type=checkbox]:checked:after {
+    display: block;
   }
 
   @media screen and (max-width:965px){

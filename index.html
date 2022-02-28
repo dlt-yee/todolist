@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
     <body>
         <div class="container">
@@ -31,54 +32,10 @@
                   <button onclick="completeEdit()" class ="btn-complete-edit">Complete edit</button>
                 </div>
               </div>
-              <ul class = 'list'>
-                <li class="list-item">
-                  <div class="task-block">
-                    <div class="title-block">
-                      <p class="title">Title 1</p>
-                    </div>
-                    <div class="line"></div>
-                    <div class="description-block">
-                      <p class="description">Description 1</p>
-                    </div>
-                  </div>
-                  <div class="btn-block">
-                      <button class="btn-edit"><img class="miniicon-edit" src="./src/assets/edit-icon.svg"></button>
-                      <button class="btn-delete"><img class="miniicon-delete" src="./src/assets/delete-icon.svg"></button>
-                    </div>
-                </li>
-                <li class="list-item">
-                  <div class="task-block">
-                    <div class="title-block">
-                      <p class="title">Title 2</p>
-                    </div>
-                    <div class="line"></div>
-                    <div class="description-block">
-                      <p class="description">Description 2</p>
-                    </div>
-                  </div>
-                  <div class="btn-block">                      
-                      <button class="btn-edit"><img class="miniicon-edit" src="./src/assets/edit-icon.svg"></button>
-                      <button class="btn-delete"><img class="miniicon-delete" src="./src/assets/delete-icon.svg"></button>
-                    </div>
-                </li>
-                <li class="list-item">
-                  <div class="task-block">
-                    <div class="title-block">
-                      <p class="title">Title 3</p>
-                    </div>
-                    <div class="line"></div>
-                    <div class="description-block">
-                      <p class="description">Description 3</p>
-                    </div>
-                  </div>
-                    <div class="btn-block">
-                      <button class="btn-edit"><img class="miniicon-edit" src="./src/assets/edit-icon.svg"></button>
-                      <button class="btn-delete"><img class="miniicon-delete" src="./src/assets/delete-icon.svg"></button>
-                    </div>
-                </li>
-              </ul>
-              <button onclick="deleteAll()" class="btn-delete">Clear all<img class="miniicon-delete" src="./src/assets/delete-icon.svg"></button>
+              <ul class = 'list'></ul>
+              <div class="bottom-btns">
+                <button onclick="deleteAll()" class="btn-delete">Clear all<img class="miniicon-delete" src="./src/assets/delete-icon.svg"></button>
+              </div>
             </div>
           </div>  
           <script src="./script.js"></script>
