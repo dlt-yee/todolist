@@ -13,14 +13,26 @@ saveBtnEl.addEventListener('click', () => {
     addTask()
 })
 
+const descriptionInputEl = document.querySelector('.description-input')
+descriptionInputEl.addEventListener('keydown', e => {
+    if(e.keyCode === 13) {
+        addTask();
+    }
+})
+
+const titleInputEl = document.querySelector('.title-input')
+titleInputEl.addEventListener('keydown', e => {
+    if(e.keyCode === 13) {
+        addTask();
+    }
+})
+
 const updateLocal = () => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
     // Ф-ция обновления локального хранилища
 }
 
 function addTask() {
-    let titleInputEl = document.querySelector('.title-input')
-    let descriptionInputEl = document.querySelector('.description-input')
     let obj = {
         title: titleInputEl.value,
         description: descriptionInputEl.value,
@@ -123,8 +135,6 @@ const deleteAll = () => {
 
 let editedTask;
 const editTask = index => {
-    let titleInputEl = document.querySelector('.title-input')
-    let descriptionInputEl = document.querySelector('.description-input')
     titleInputEl.value = tasks[index].title;
     descriptionInputEl.value = tasks[index].description;
 
@@ -137,9 +147,6 @@ const editTask = index => {
 }
 
 const completeEdit = index => {
-    let titleInputEl = document.querySelector('.title-input')
-    let descriptionInputEl = document.querySelector('.description-input')
-
     index = editedTask;
     if (titleInputEl.value !== '' && descriptionInputEl.value !== '') {
     tasks[index].title = titleInputEl.value;
