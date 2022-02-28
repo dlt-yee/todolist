@@ -13,11 +13,6 @@ saveBtnEl.addEventListener('click', () => {
     addTask()
 })
 
-deleteBtnEl.addEventListener('click', () => {
-    deleteTask()
-})
-
-
 const updateLocal = () => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
     // Ф-ция обновления локального хранилища
@@ -112,6 +107,7 @@ const deleteTask = index => {
 
     // Ф-ция удаления задачи
 }
+
 const deleteAll = () => {
     taskList.classList.add('delition');
     setTimeout(() =>{
